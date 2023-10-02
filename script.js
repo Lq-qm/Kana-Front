@@ -1,17 +1,26 @@
 // Lista de kanjis e seus significados
-const kanjimeaning = ['Um', 'Dois', 'Três', 'Quatro', 'Cinco', 'Seis', 'Sete', 'Oito', 'Nove', 'Dez'];
+const kanjiMeaning = ['Zero', 'Ichi', 'Ni', 'San', 'Shi', 'Go', 'Roku', 'Nana', 'Hachi', 'Kyu', 'Ju', 'Hyaku', 'Sen', 'Man', 'Hyakuman', 'Oku', 'Choo', 'Kei', 'En'];
 
 const kanjiData = [
-    { kanji: '一', meanings: kanjimeaning, correctMeaning: 'Um' },
-    { kanji: '二', meanings: kanjimeaning, correctMeaning: 'Dois' },
-    { kanji: '三', meanings: kanjimeaning, correctMeaning: 'Três' },
-    { kanji: '四', meanings: kanjimeaning, correctMeaning: 'Quatro' },
-    { kanji: '五', meanings: kanjimeaning, correctMeaning: 'Cinco' },
-    { kanji: '六', meanings: kanjimeaning, correctMeaning: 'Seis' },
-    { kanji: '七', meanings: kanjimeaning, correctMeaning: 'Sete' },
-    { kanji: '八', meanings: kanjimeaning, correctMeaning: 'Oito' },
-    { kanji: '九', meanings: kanjimeaning, correctMeaning: 'Nove' },
-    { kanji: '十', meanings: kanjimeaning, correctMeaning: 'Dez' },
+    { kanji: '零', meanings: kanjiMeaning, correctMeaning: 'Zero' },
+    { kanji: '一', meanings: kanjiMeaning, correctMeaning: 'Ichi' },
+    { kanji: '二', meanings: kanjiMeaning, correctMeaning: 'Ni' },
+    { kanji: '三', meanings: kanjiMeaning, correctMeaning: 'San' },
+    { kanji: '四', meanings: kanjiMeaning, correctMeaning: 'Shi' },
+    { kanji: '五', meanings: kanjiMeaning, correctMeaning: 'Go' },
+    { kanji: '六', meanings: kanjiMeaning, correctMeaning: 'Roku' },
+    { kanji: '七', meanings: kanjiMeaning, correctMeaning: 'Nana' },
+    { kanji: '八', meanings: kanjiMeaning, correctMeaning: 'Hachi' },
+    { kanji: '九', meanings: kanjiMeaning, correctMeaning: 'Kyu' },
+    { kanji: '十', meanings: kanjiMeaning, correctMeaning: 'Ju' },
+    { kanji: '百', meanings: kanjiMeaning, correctMeaning: 'Hyaku' },
+    { kanji: '千', meanings: kanjiMeaning, correctMeaning: 'Sen' },
+    { kanji: '万', meanings: kanjiMeaning, correctMeaning: 'Man' },
+    { kanji: '百万', meanings: kanjiMeaning, correctMeaning: 'Hyakuman' },
+    { kanji: '億', meanings: kanjiMeaning, correctMeaning: 'Oku' },
+    { kanji: '兆', meanings: kanjiMeaning, correctMeaning: 'Choo' },
+    { kanji: '京', meanings: kanjiMeaning, correctMeaning: 'Kei' },
+    { kanji: '円', meanings: kanjiMeaning, correctMeaning: 'En' },
     // Adicione mais kanjis conforme necessário
 ];
 
