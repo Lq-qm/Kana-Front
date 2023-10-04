@@ -5,13 +5,16 @@ function mudarTipoKanji() {
     switch (tipoSelecionado) {
         case 'numerais':
             kanjiData = kanjiNumerais;
+            iniciarQuadros();
             break;
         case 'alfabeto':
             kanjiData = kanjiAlfabeto;
+            iniciarQuadros();
             break;
         // Adicione mais tipos conforme necessário
         default:
             kanjiData = kanjiNumerais;
+            iniciarQuadros();
     }
     // Reinicie o jogo com os novos kanjis
     resetarJogo();
@@ -125,11 +128,43 @@ function generateRandomOptions() {
     });
 }
 
+let kanjiQuadro = [];
+
+function iniciarQuadros() {
+    // Adicione todos os kanjis do tipo selecionado no quadro
+    kanjiQuadro = kanjiData.slice(); // Copia a lista de kanjis
+    // Atualize o quadro no HTML
+    atualizarQuadros();
+}
+
+function atualizarQuadros() {
+    const quadroElemento = document.getElementById('quadroKanjis', 'quadro2Kanjis');
+    quadroElemento.innerHTML = ''; // Limpa o quadro
+
+    // Adiciona os kanjis ao quadro
+    kanjiQuadro.forEach(kanji => {
+        const kanjiElemento = document.createElement('div');
+        kanjiElemento.classList.add('kanjiQuadro');
+        kanjiElemento.innerText = kanji.kanji;
+        quadroElemento.appendChild(kanjiElemento);
+    });
+}
+
+function acenderKanji(index) {
+    const kanjiElemento = document.querySelectorAll('.kanjiQuadro')[index];
+    kanjiElemento.classList.add('acendido');
+}
+
+function apagarQuadro() {
+    const quadroElemento = document.getElementById('quadroKanjis', 'quadro2Kanjis');
+    quadroElemento.innerHTML = ''; // Limpa o quadro
+}
+
 function checkAnswer(selectedMeaning) {
     if (selectedMeaning === kanjiData[currentKanjiIndex].correctMeaning) {
-        score++;
+        score++, acenderKanji(currentKanjiIndex);
     } else {
-        score = 0;
+        score = 0, apagarQuadro(), iniciarQuadros();
     }
 
     // Atualiza a pontuação na tela

@@ -19,6 +19,46 @@ body {
     border-radius: 10px;
 }
 
+#quadro2Kanjis {
+    width: 320px; /* ou o tamanho desejado */
+    height: auto; /* ou o tamanho desejado */
+    background-color: #ffffff; /* Cor de fundo do quadro */
+    border: 3px solid #ccc; /* Borda do quadro */
+    border-radius: 10px;
+    float: left; /* Alinha à direita do container principal */
+    padding: 10px;
+}
+
+/* Quadro Dos Kanjis */
+#quadroKanjis {
+    width: 320px; /* ou o tamanho desejado */
+    height: auto; /* ou o tamanho desejado */
+    background-color: #ffffff; /* Cor de fundo do quadro */
+    border: 3px solid #ccc; /* Borda do quadro */
+    border-radius: 10px;
+    float: right; /* Alinha à direita do container principal */
+    padding: 10px;
+}
+
+/* Kanji Dentro do Quadro */
+.kanjiQuadro {
+    width: 30px;
+    height: auto;
+    font-size: 24px;
+    text-align: center;
+    line-height: 30px;
+    margin: 5px;
+    background-color: #ffffff; /* Cor de fundo dos kanjis */
+    border: 1px solid #ccc; /* Borda dos kanjis */
+    display: inline-block;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.kanjiQuadro.acendido {
+    background-color: #00ff00; /* Cor quando o kanji é acendido */
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
@@ -49,9 +89,4 @@ h1 {
 
 #options button {
     margin: 5px;
-}
-
-#recompensa {
-    text-align: center;
-    margin-top: 20px;
 }
