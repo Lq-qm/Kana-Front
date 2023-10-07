@@ -10,41 +10,63 @@ body {
     text-align: center;
 }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
+.container{
+    margin: auto;
     padding: 20px;
     border: 3px solid #8b98a7;
     border-radius: 10px;
+    display: flex;
 }
 
+#kanjiDisplay {
+    height: auto;
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #8b98a7;
+    border-radius: 10px;
+    order: 2;
+}
+
+#options {
+    height: auto;
+    width: 750px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #8b98a7;
+    border-radius: 10px;
+    order: 2;
+}
+
+/* Quadro Das Traduções */
 #quadro2Kanjis {
-    width: 320px; /* ou o tamanho desejado */
     height: auto; /* ou o tamanho desejado */
+    width: 320px; /* ou o tamanho desejado */
     background-color: #ffffff; /* Cor de fundo do quadro */
     border: 3px solid #ccc; /* Borda do quadro */
     border-radius: 10px;
     float: left; /* Alinha à direita do container principal */
     padding: 10px;
+    order: 1;
 }
 
 /* Quadro Dos Kanjis */
 #quadroKanjis {
-    width: 320px; /* ou o tamanho desejado */
     height: auto; /* ou o tamanho desejado */
+    width: 320px; /* ou o tamanho desejado */
     background-color: #ffffff; /* Cor de fundo do quadro */
     border: 3px solid #ccc; /* Borda do quadro */
     border-radius: 10px;
     float: right; /* Alinha à direita do container principal */
     padding: 10px;
+    order: 3;
 }
 
 /* Kanji Dentro do Quadro */
 .kanjiQuadro {
     width: 30px;
     height: auto;
-    font-size: 24px;
+    font-size: 22px;
     text-align: center;
     line-height: 30px;
     margin: 5px;
