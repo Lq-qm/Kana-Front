@@ -3,33 +3,33 @@ function mudarTipoKanji() {
     switch (tipoSelecionado) {
         case 'numerais':
             kanjiData = kanjiNumerais;
-            kanjiData2 = kanjiNumeraisMeaning;
             iniciarQuadro();
-            iniciarQuadro2();
             break;
         case 'hiragana':
             kanjiData = kanjiAlfabeto;
             iniciarQuadro();
-            iniciarQuadro2();
             break;
         case 'katakana':
             kanjiData = kanjiAlfabetoKatakana;
             iniciarQuadro();
-            iniciarQuadro2();
             break;
-        case 'hiraganadigrafos':
+        case 'hiraganadigraofos':
             kanjiData = kanjiAlfabetoDigrafos;
             iniciarQuadro();
-            iniciarQuadro2();
             break;
         default:
             kanjiData = kanjiNumerais;
             iniciarQuadro();
-            iniciarQuadro2();
     }
     resetarJogo();
 }
-let kanjiNumeraisMeaning = ['Zero', 'Ichi', 'Ni', 'San', 'Shi', 'Go', 'Roku', 'Nana', 'Hachi', 'Kyu', 'Ju', 'Hyaku', 'Sen', 'Man', 'Hyakuman', 'Oku', 'Choo', 'Kei', 'En'];
+
+let kanjiNumeraisMeaning = [
+'Zero', 'Ichi', 'Ni', 'San', 'Shi', 
+'Go', 'Roku', 'Nana', 'Hachi', 'Kyu', 
+'Ju', 'Hyaku', 'Sen', 'Man', 'Hyakuman', 
+'Oku', 'Choo', 'Kei', 'En',
+];
 
 let kanjiNumerais = [
     { kanji: '零', meanings: kanjiNumeraisMeaning, correctMeaning: 'Zero' },
@@ -65,7 +65,7 @@ let kanjiLetras = [
 'ya', 'yu', 'yo', 
 'ra', 'ri', 'ru', 're', 'ro',
 'wa', 'wo', 'n', 
-]
+];
 
 let kanjiAlfabeto = [
     { kanji: 'あ', meanings: kanjiLetras, correctMeaning: 'A' },
@@ -114,43 +114,7 @@ let kanjiAlfabeto = [
     { kanji: 'わ', meanings: kanjiLetras, correctMeaning: 'Wa' },
     { kanji: 'を', meanings: kanjiLetras, correctMeaning: 'Wo' },
     { kanji: 'ん', meanings: kanjiLetras, correctMeaning: 'N' },
-]
-
-let kanjiOpcoesDigrafos = [
-'ga', 'gi', 'gu', 'ge', 'go',
-'za', 'ji', 'zu', 'ze', 'zo',
-'da', 'ji', 'zu', 'de', 'do',
-'ba', 'bi', 'bu', 'be', 'bo',
-'pa', 'pi', 'pu', 'pe', 'po',
-]
-
-let kanjiAlfabetoDigrafos = [
-    { kanji: 'が', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ga' },
-    { kanji: 'ぎ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Gi' },
-    { kanji: 'ぐ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Gu' },
-    { kanji: 'げ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ge' },
-    { kanji: 'ご', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Go' },
-    { kanji: 'ざ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Za' },
-    { kanji: 'じ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ji' },
-    { kanji: 'ず', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zu' },
-    { kanji: 'ぜ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ze' },
-    { kanji: 'ぞ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zo' },
-    { kanji: 'だ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Da' },
-    { kanji: 'ぢ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ji' },
-    { kanji: 'づ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zu' },
-    { kanji: 'で', meanings: kanjiOpcoesDigrafos, correctMeaning: 'De' },
-    { kanji: 'ど', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Do' },
-    { kanji: 'ば', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ba' },
-    { kanji: 'び', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bi' },
-    { kanji: 'ぶ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bu' },
-    { kanji: 'べ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Be' },
-    { kanji: 'ぼ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bo' },
-    { kanji: 'ぱ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pa' },
-    { kanji: 'ぴ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pi' },
-    { kanji: 'ぷ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pu' },
-    { kanji: 'ぺ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pe' },
-    { kanji: 'ぽ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Po' }
-]
+];
 
 let kanjiAlfabetoKatakana = [
     { kanji: 'ア', meanings: kanjiLetras, correctMeaning: 'A' },
@@ -199,7 +163,43 @@ let kanjiAlfabetoKatakana = [
     { kanji: 'ワ', meanings: kanjiLetras, correctMeaning: 'Wa' },
     { kanji: 'ヲ', meanings: kanjiLetras, correctMeaning: 'Wo' },
     { kanji: 'ン', meanings: kanjiLetras, correctMeaning: 'N' },
-]
+];
+
+let kanjiOpcoesDigrafos = [
+'ga', 'gi', 'gu', 'ge', 'go',
+'za', 'zu', 'ze', 'zo',
+'da', 'ji', 'de', 'do',
+'ba', 'bi', 'bu', 'be', 'bo',
+'pa', 'pi', 'pu', 'pe', 'po',
+];
+
+let kanjiAlfabetoDigrafos = [
+    { kanji: 'が', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ga' },
+    { kanji: 'ぎ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Gi' },
+    { kanji: 'ぐ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Gu' },
+    { kanji: 'げ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ge' },
+    { kanji: 'ご', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Go' },
+    { kanji: 'ざ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Za' },
+    { kanji: 'じ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ji' },
+    { kanji: 'ず', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zu' },
+    { kanji: 'ぜ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ze' },
+    { kanji: 'ぞ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zo' },
+    { kanji: 'だ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Da' },
+    { kanji: 'ぢ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ji' },
+    { kanji: 'づ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Zu' },
+    { kanji: 'で', meanings: kanjiOpcoesDigrafos, correctMeaning: 'De' },
+    { kanji: 'ど', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Do' },
+    { kanji: 'ば', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Ba' },
+    { kanji: 'び', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bi' },
+    { kanji: 'ぶ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bu' },
+    { kanji: 'べ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Be' },
+    { kanji: 'ぼ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Bo' },
+    { kanji: 'ぱ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pa' },
+    { kanji: 'ぴ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pi' },
+    { kanji: 'ぷ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pu' },
+    { kanji: 'ぺ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pe' },
+    { kanji: 'ぽ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Po' },
+];
 
 let currentKanjiIndex = 0;
 
@@ -222,20 +222,12 @@ function generateRandomOptions() {
 }
 
 let kanjiQuadro = [];
-let kanjiQuadro2 = [];
 
 function iniciarQuadro() {
     // Adicione todos os kanjis do tipo selecionado no quadro
     kanjiQuadro = kanjiData.slice(); // Copia a lista de kanjis
     // Atualize o quadro no HTML
     atualizarQuadro();
-}
-
-function iniciarQuadro2() {
-    // Adicione todos os kanjis do tipo selecionado no quadro
-    kanjiQuadro2 = kanjiData2.slice(); // Copia a lista de kanjis
-    // Atualize o quadro no HTML
-    atualizarQuadro2();
 }
 
 function atualizarQuadro() {
@@ -251,21 +243,8 @@ function atualizarQuadro() {
     });
 }
 
-function atualizarQuadro2() {
-    const quadroElemento = document.getElementById('quadro2Kanjis');
-    quadroElemento.innerHTML = ''; // Limpa o quadro
-
-    // Adiciona os kanjis ao quadro2
-    kanjiQuadro.forEach(kanji => {
-        const kanjiElemento = document.createElement('div');
-        kanjiElemento.classList.add('kanjiQuadro');
-        kanjiElemento.innerText = kanji.correctMeaning;
-        quadroElemento.appendChild(kanjiElemento);
-    });
-}
-
 function acenderKanji(index) {
-    const kanjiElemento = document.querySelectorAll('.kanjiQuadro',)[index];
+    const kanjiElemento = document.querySelectorAll('.kanjiQuadro')[index];
     kanjiElemento.classList.add('acendido');
 }
 
