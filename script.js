@@ -17,6 +17,10 @@ function mudarTipoKanji() {
             kanjiData = kanjiAlfabetoDigrafos;
             iniciarQuadro();
             break;
+        case 'hiraganadigraofosyoon':
+            kanjiData = kanjiAlfabetoDigrafosYoon;
+            iniciarQuadro();
+            break;
         default:
             kanjiData = kanjiNumerais;
             iniciarQuadro();
@@ -199,6 +203,52 @@ let kanjiAlfabetoDigrafos = [
     { kanji: 'ぷ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pu' },
     { kanji: 'ぺ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Pe' },
     { kanji: 'ぽ', meanings: kanjiOpcoesDigrafos, correctMeaning: 'Po' },
+];
+
+let kanjiOpcoesDigrafosYoon = [
+    'Kya', 'Kyu', 'Kyo',
+    'Cha', 'Chu', 'Cho',
+    'Hya', 'Hyu', 'Hyo',
+    'Rya', 'Ryu', 'Ryo',
+    'Pya', 'Pyu', 'Pyo',
+    'Sha', 'Shu', 'Sho',
+    'Nya', 'Nyu', 'Nyo',
+    'Mya', 'Myu', 'Myo',
+    'Gya', 'Gyu', 'Gyo',
+    'Bya', 'Byu', 'Byo',
+]
+
+let kanjiAlfabetoDigrafosYoon = [
+    { kanji: 'きゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Kya' },
+    { kanji: 'きゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Kyu' },
+    { kanji: 'きょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Kyo' },
+    { kanji: 'ちゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Cha' },
+    { kanji: 'ちゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Chu' },
+    { kanji: 'ちょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Cho' },
+    { kanji: 'ひゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Hya' },
+    { kanji: 'ひゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Hyu' },
+    { kanji: 'ひょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Hyo' },
+    { kanji: 'りゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Rya' },
+    { kanji: 'りゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Ryu' },
+    { kanji: 'りょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Ryo' },
+    { kanji: 'ぴゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Pya' },
+    { kanji: 'ぴゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Pyu' },
+    { kanji: 'ぴょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Pyo' },
+    { kanji: 'しゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Sha' },
+    { kanji: 'しゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Shu' },
+    { kanji: 'しょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Sho' },
+    { kanji: 'にゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Nya' },
+    { kanji: 'にゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Nyu' },
+    { kanji: 'にょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Nyo' },
+    { kanji: 'みゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Mya' },
+    { kanji: 'みゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Myu' },
+    { kanji: 'みょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Myo' },
+    { kanji: 'きゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Gya' },
+    { kanji: 'きゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Gyu' },
+    { kanji: 'きょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Gyo' },
+    { kanji: 'びゃ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Bya' },
+    { kanji: 'びゅ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Byu' },
+    { kanji: 'びょ', meanings: kanjiOpcoesDigrafosYoon, correctMeaning: 'Byo' },
 ];
 
 let currentKanjiIndex = 0;
